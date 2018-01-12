@@ -1,0 +1,18 @@
+{% extends 'frame-meters.html' %}
+
+{% block title %}
+ReValues - Jane Re
+{% endblock %}
+
+{% block custom_js %}
+<script src="{{ url_for('static', filename='js/meter/jane.js') }}"></script>
+{% endblock %}
+
+{% block content2 %}
+<h1>Jane's Nunchi</h1>
+<h2 id="lval">-</h2>
+<h3 id="val">-</h3>
+<p id="pval">-</p>
+{% endblock %}
+
+{% block slider_id %}jane-slider{% endblock %}

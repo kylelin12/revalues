@@ -1,0 +1,25 @@
+{% extends 'frame.html' %}
+
+{% block plugin_css %}
+<link href="{{ url_for('static', filename='vendor/bootstrap-slider/bootstrap-slider.min.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block plugin_js %}
+<script src="{{ url_for('static', filename='vendor/bootstrap-slider/bootstrap-slider.min.js') }}"></script>
+{% endblock %}
+
+{% block custom_css %}
+<link href="{{ url_for('static', filename='css/meter/custom.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<header class="masthead text-center text-white d-flex">
+    <div class="container my-auto">
+        {% block content2 %}
+        {% endblock %}
+        <div class="slidecontainer">
+            <input type="range" min="1" max="5" value="1" class="slider" id="{% block slider_id %}slider_id{% endblock %}">
+        </div>
+    </div>
+</header>
+{% endblock %}
