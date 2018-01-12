@@ -1,1 +1,19 @@
 {% extends 'frame-meters.html' %}
+
+{% block title %}
+ReValues - Devon
+{% endblock %}
+
+{% block custom_js %}
+<script src="{{ url_for('static', filename='js/meter/devon.js') }}"></script>
+{% endblock %}
+
+{% block content2 %}
+<h1>Devon's Independence</h1>
+<h2 id="lval">-</h2>
+<h3>Rating:</h3>
+<h1 id="val">-</h1>
+<p id="pval">-</p>
+{% endblock %}
+
+{% block slider_id %}devon-slider{% endblock %}
